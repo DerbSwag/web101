@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+        .button {
+            background-color: gray;
+            border: 0;
+            padding: 20px;
+        }
+
+        .button:hover {
+            background-color: blue;
+        }
+
+        .button:active {
+            background-color: orange;
+        }
+
+        .button:focus {
+            background-color: red;
+        }
+
+        input:focus{
+            background-color: aqua;
+        }
+        .container .item:first-child {
+                background-color: blue;
+            }
+            .container .item:nth-child(3) {
+                background-color: green;
+            }
+            .container .item:last-child {
+                background-color: orange;
+            }
+    </style>
+  </head>
+  <body>
+    <!--:hover คือการ Selector เพิ่ม style ไปยังตัวที่กำลังมีเมาส์ (hover) วางอยู่
+:active คือการ Selector เพิ่ม style ไปยังตัวที่กำลังคลิกอยู่
+:focus คือการ Selector ไปยังตัวที่ cursor กำลัง focus อยู่ -->
+        <input type="text">
+        <button class="button">นี่คือปุ่ม</button>
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+  </body>
+</html>
