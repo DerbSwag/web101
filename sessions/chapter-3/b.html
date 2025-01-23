@@ -16,7 +16,7 @@ body {
     background-color: lightgreen;
   }
 }
-
+/* Flex สำหรับแบ่ง column แบบ responsive */
 .container {
       display: flex;
     }
@@ -31,6 +31,9 @@ body {
         flex-direction: column;
       }
     }
+
+    /* <!-- Grid สำหรับแบ่ง row, column แบบ responsive --> */
+
 
     .grid-container {
       display: grid;
@@ -52,7 +55,7 @@ body {
         grid-template-columns: 1fr;
       }
     }
-
+    /* Navigation and menu */
     ul {
       list-style: none;
       margin: 0;
@@ -99,12 +102,16 @@ body {
         >
         <img src="https://fastly.picsum.photos/id/23/200/200.jpg?hmac=IMR2f77CBqpauCb5W6kGzhwbKatX_r9IvgWj6n7FQ7c">
       </picture>
+
+      <!-- Flex สำหรับแบ่ง column แบบ responsive */ -->
+
       <div class="container">
 
       <div class="item">Item 1</div>
       <div class="item">Item 2</div>
     </div>
 
+    <!-- Grid สำหรับแบ่ง row, column แบบ responsive -->
     <div class="grid-container">
         <div class="item">Item 1</div>
         <div class="item">Item 2</div>
@@ -114,6 +121,7 @@ body {
         <div class="item">Item 6</div>
       </div>
 
+      <!--5Navigation and menu -->
       <div class="desktop">
         <ul>
           <li>Home</li>
