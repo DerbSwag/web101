@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container.item {
+            background-color: blue
+                }
+       .main-contaner.item{
+        background-color: brown;
+        padding: 10px;
+       }
+
+       .button {
+            padding: 10px;
+            border: 0;
+            border-radius: 5px;
+            background-color: gray;
+        }
+        .button.active {
+            background-color: green;
+        }
+        .button.warning {
+            background-color: orange;
+        }
+        .button.danger {
+            background-color: red;
+        }
+
+        item1 + .item2 {
+                background-color: beige;
+            }
+
+            input[type=text] {
+            background-color: red;
+            border: 1px
+        }
+
+    </style>
+</head>
+
+<body>
+    Hello new class
+
+     <!-- 1. item เป็นลูกของ container -->
+
+    <div calass="container">
+        container
+        <div class="item">
+            item
+        </div>
+
+    </div>
+
+    <div calass="footer-container">
+        container
+        <div class="item">
+            item
+        </div>
+
+    </div>
+
+    
+     <!-- 2. item เป็นลูกของ container แค่ชั้นเดียว -->
+    <div calass="main-contaner">
+        container
+        <div class="item">
+         item
+         <div class="item">
+            item 1
+        </div>
+
+        <div class="item">
+            item 2
+        </div>
+
+        <div class="item">
+            item 3
+        </div>
+
+     </div>
+
+ </div>
+
+  <!-- 3. มี class ติดกัน -->
+  
+  <button class="button active">ปุ่มทำงาน</button>
+  <button class="button warning">ปุ่มเตือน</button>
+  <button class="button danger">ปุ่มอันตราย</button>
+
+  <!-- 4. เพื่อนกัน (adjacent) -->
+  <div class="item1">Item 1 </div>
+  <div class="item2">Item 2 (ติด)</div>
+  <div class="item2">Item 2 (ไม่ติด)</div>
+
+                 <!-- 5. attribute selector -->
+
+                 <input type='text' name='firstname'> <br>
+                 <input type='text' name='lastname'>
+
+
+</body>
+
+</html>
