@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*    1.     Default styles that apply to all devices */
+body {
+  background-color: lightblue;
+}
+
+/* Styles that apply to screens narrower than 600px */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+.container {
+      display: flex;
+    }
+
+    .container .item {
+      padding: 10px;
+      flex: 1;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-container .item {
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .desktop ul {
+      display: flex;
+    }
+    .desktop ul > li {
+      margin-right: 20px;
+    }
+    .mobile-menu,
+    .mobile {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      .desktop {
+        display: none;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .mobile-menu:hover + .mobile {
+        display: block;
+      }
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="body">
+        Hello world breakpint
+    </div>
+
+  
+    <!--
+           2.  images and media
+    -->
+    <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="https://fastly.picsum.photos/id/883/200/200.jpg?hmac=evNCTcW3jHI_xOnAn7LKuFH_YkA8r6WdQovmsyoM1IY"
+        >
+        <img src="https://fastly.picsum.photos/id/23/200/200.jpg?hmac=IMR2f77CBqpauCb5W6kGzhwbKatX_r9IvgWj6n7FQ7c">
+      </picture>
+      <div class="container">
+
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+      </div>
+
+      <div class="desktop">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <div class="mobile-menu">Menu</div>
+      <div class="mobile">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+</body>
+</html>
