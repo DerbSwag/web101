@@ -1,0 +1,33 @@
+<html lang="en">
+    <head>
+        <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            transition: transform 0.3s ease;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box:hover {
+            transform: rotate(45deg) scale(1.2);
+        }
+
+        .box:nth-child(2):hover {
+            transform: translateX(50px);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>
