@@ -1,16 +1,16 @@
-// เรียกใช้ library express ด้วยคำสั่ง require
 const express = require('express')
-
-// ประกาศเริ่มต้นการใช้ express
 const app = express()
-const port = 8000
 
-// สร้าง API path '/' และคืนคำ Hello world ออกมาผ่าน API
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+// สร้าง GET API path /user
+app.get('/user', (req, res) => {
+  res.json({
+    firstname: 'ชื่อจริง',
+    lastname: 'นามสกุล',
+    age: 20
+  });
 })
 
-// ประกาศ​gxbf http server ที่ port 8000 (ตามตัวแปร port)
+const port = 8000
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Server is running on port ${port}`)
 })
